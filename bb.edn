@@ -1,0 +1,11 @@
+{:paths ["src" "test"]
+ :deps {org.babashka/http-server {:mvn/version "0.1.14"}
+        io.github.clojure/tools.build {:git/tag "v0.10.5" :git/sha "2a21b7a"}}
+ :tasks {build {:doc "Builds website"
+                :requires ([build])
+                :task (apply build/-main *command-line-args*)}
+         dev {:doc "Starts up a dev server"
+              :requires ([dev])
+              :task (dev/start-server 8000)}
+         build-dev {:doc "Builds website, then starts the dev server"
+                    :depends [build dev]}}}

@@ -1,0 +1,1 @@
+Make sure you've read long term goals first, whatever the link for that page is! But also don't read the life lessons page, because uhhhh this is breaking one of those lessons (Namely the sharing goals one).
