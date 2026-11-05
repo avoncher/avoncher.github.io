@@ -26,6 +26,7 @@
       [:title title]
       (for [stylesheet stylesheets]
         [:link {:rel "stylesheet" :href stylesheet}])
+      (h/raw "<script data-goatcounter=\"https://avoncher.goatcounter.com/count\" async src=\"//gc.zgo.at/count.js\"></script>")
       append-head]
      [:body body]])))
 
