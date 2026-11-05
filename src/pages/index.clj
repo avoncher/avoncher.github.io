@@ -6,7 +6,7 @@
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
-(def message-of-the-day [:i "NOT a grahp.dev clone!"])
+(def message-of-the-day "Good morning! Scroll down for a new article!")
 
 (def spezi
   [:div {:style {:display "flex"
@@ -93,7 +93,10 @@
          [:p "When I was in Germany, I discovered Spezi, and it is one of my favourite drinks! I highly recommend trying some, especially with some ice and a slice of orange."]
          [:hr]
          (get-post-content-with-link "My Goals"
-                                     "my-goals")]
+                                     "my-goals")
+         [:hr]
+         (get-post-content-with-link  "Almost Getting Hit By Cars"
+                                      "almost-getting-hit-by-cars")]
         [:div.col-6.column
          (get-post-content-with-link "New Years Resolutions"
                                      "new-years-resolutions"
@@ -106,7 +109,10 @@
 
          [:hr]
          [:h2 "Contact"]
-         [:p "Go to 39°52'59.2\"N 25°13'23.8\"E. You'll know what to do when you get there."]]]]]]]))
+         [:p "Go to 39°52'59.2\"N 25°13'23.8\"E. You'll know what to do when you get there."]
+         [:hr]
+         (get-post-content-with-link "The Count of Monte Cristo"
+                                     "the-count-of-monte-cristo")]]]]]]))
 
 (def get-page
   {:location "index.html"

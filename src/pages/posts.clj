@@ -2,7 +2,8 @@
   (:require [clojure.java.io :as io]
             [nextjournal.markdown :as md]
             [clojure.string :as string]
-            [hiccup2.core :as h])
+            [hiccup2.core :as h]
+            [clojure.string :as str])
   (:import (java.time Instant ZoneId)
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
@@ -26,6 +27,14 @@
        Instant/ofEpochMilli
        (.format date-formatter)))
 
+(defn format-post-name [post-name]
+  (->> (-> post-name
+           (string/replace #".md" "")
+           (string/replace #"-" " ")
+           (string/split #" "))
+       (map #(str/capitalize %))
+       (str/join " ")))
+
 (def post-index
   {:location  "posts/index.html"
    :contents
@@ -36,17 +45,18 @@
            [:p [:a {:href "/"} "Home"] "."]
            [:ul
             (for [post-name post-files] [:li [:a {:href (str "posts/"
-                                                             (string/replace post-name #".md$" ""))} post-name]])])}})
+                                                             (string/replace post-name #".md$" ""))}
+                                              (format-post-name post-name)]])])}})
 
 (def posts
   (map (fn [name]
          (let [real-name (string/replace name #".md$" "")]
            {:location (str "posts/" real-name "/index.html")
             :contents
-            {:title name
+            {:title (format-post-name name)
              :append-head css-post
              :body
-             (h/html [:h1 name]
+             (h/html [:h1 (format-post-name name)]
                      [:p {:style "color: #777"} "Last edited " (last-edited name) "."]
                      (md/->hiccup (slurp (str "src/pages/posts/" name)))
                      [:p [:a {:href "/"} "Home"] "."])}}))

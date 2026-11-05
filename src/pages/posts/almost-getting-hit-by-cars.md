@@ -1,0 +1,5 @@
+One of the most frustrating things of all time is when an unfocused driver of a car almost maims you with their car. It is particularly frustrating because almost every time it happens to me, the driver of the car gets angry that I had the the gall to be crossing the road at that time when they wanted to turn, despite people walking having the right of way, and despite me being in the road already. This anger is usually followed by angry honks, and then ear deafening revs of their car engine as they speed off like nothing happened.
+
+The most frustrating part of it all, is just how powerless you are. You were forced to jump out of the way like a bird on the road. You almost got seriously harmed, possibly with broken bones and long lasting damage, your mood is just ruined for the rest of the day, and the car is the one who gets to speed off like nothing happened, and guess what? They're right: nothing ever fucking happens to them driving their car. We live in a world built for cars and the people who have the privilege of driving in one.
+
+The only path forward is to build safer cities for people walking. We'll see if it ever happens...
