@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+    --old-newspaper-bg: #d8c8a8;
+    --old-newspaper-paper-bg: #dbc79f;
+    --old-newspaper-color: #2e261e;
+    --font-fancy: "Manufacturing Consent", serif;
+    --font-title: "PT Serif", serif;
+    --font-prose: "Times New Roman", serif;
+}
+
+body {
+    /* Sadly I asked a clanker to make a background to see what it would look like, and unfortunately I really like it so uhhhh */
+    background-color: #5a3a1c;
+    background-image:
+        /* edge shading */
+        radial-gradient(
+            ellipse at center,
+            transparent 45%,
+            rgba(0, 0, 0, 0.4) 100%
+        ),
+        /* gaps between boards, every 110px */
+        repeating-linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.55) 0 2px,
+                transparent 2px 110px
+            ),
+        /* fine grain lines */
+        repeating-linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.04) 0 1px,
+                transparent 1px 4px,
+                rgba(0, 0, 0, 0.1) 4px 5px,
+                transparent 5px 11px
+            ),
+        /* color variation along the length of the boards */
+        linear-gradient(
+                90deg,
+                #4d3017,
+                #6a4624 25%,
+                #563819 55%,
+                #72502b 80%,
+                #4d3017
+            );
+    background-attachment: fixed;
+
+    color: var(--old-newspaper-color);
+    font-family: var(--font-prose);
+    font-size: 18px;
+}
+
+#paper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
+    background: var(--old-newspaper-paper-bg);
+    padding: 15px;
+    box-shadow: 0 0 10px;
+}
+
+#title {
+    text-align: center;
+    font-family: var(--font-fancy);
+    font-size: calc(1vw + 2rem);
+    font-weight: 700;
+    margin: 30px 0;
+
+    #title-intro,
+    #title-outro {
+        font-family: var(--font-prose);
+        font-weight: 400;
+        font-size: 1.2rem;
+        word-spacing: 0.2rem;
+    }
+    #title-outro {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        margin: 0;
+        position: relative;
+        display: inline-block;
+    }
+
+    h1::before,
+    h1::after {
+        font-family: var(--font-title);
+    }
+
+    h1::before {
+        content: "VOL I";
+        position: absolute;
+        font-size: 1.2rem;
+        left: -5ch;
+    }
+
+    h1::after {
+        content: "Nº1";
+        position: absolute;
+        font-size: 1.2rem;
+        right: -3ch;
+    }
+}
+
+#motd {
+    text-align: center;
+    border-top: 2px solid var(--old-newspaper-color);
+    border-bottom: 2px solid var(--old-newspaper-color);
+    font-size: 1.5rem;
+    font-family: var(--font-title);
+    font-weight: 700;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+#columns {
+    text-align: justify;
+}
+.column {
+    --horizontal-padding: 10px;
+
+    &:not(:first-child) {
+        padding-left: var(--horizontal-padding);
+    }
+
+    &:not(:last-child) {
+        padding-right: var(--horizontal-padding);
+        border-right: 2px solid var(--old-newspaper-color);
+    }
+}
+
+.ad {
+    border: 2px solid var(--old-newspaper-color);
+    box-shadow: 3px 3px var(--old-newspaper-color);
+    margin-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+    .sf-grid {
+        flex-direction: column;
+    }
+    .sf-grid [class*="col-"] {
+        width: 100%;
+        /*padding-right: 0;*/
+    }
+    .sf-grid [class*="col-"]:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+
+    .column {
+        &,
+        &:not(:first-child),
+        &:not(:last-child) {
+            padding: 0;
+        }
+
+        &:not(:last-child) {
+            border-right: 0;
+            border-bottom: 2px solid var(--old-newspaper-color);
+        }
+    }
+}
+
+h2 {
+    font-family: var(--font-title);
+    margin: 0;
+    margin-top: 0.3rem;
+    font-size: 1.6rem;
+    word-spacing: 0.4rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+p {
+    margin: 0.7rem 0;
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    a {
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--old-newspaper-color);
+    border-bottom: 2px solid var(--old-newspaper-color);
+    padding: 0.5px 0;
+}
