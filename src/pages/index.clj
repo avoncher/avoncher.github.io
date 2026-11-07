@@ -6,7 +6,7 @@
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
-(def message-of-the-day "Good morning! Scroll down for a new article!")
+(def message-of-the-day "If anything is worth doing, it's worth doing badly.")
 
 (def spezi
   [:div {:style {:display "flex"
@@ -77,7 +77,10 @@
                                    "put-your-phone-away")
        [:hr]
        [:h2 "Artifcial Intelligence Usage"]
-       [:p "The vast majority of this site was hand coded by yours truly. The images on this site are not AI generated, but may have minor modifications from an AI, including but not limited to changing the background colour. The prose on the website is handwritten in totality."]]
+       [:p "The vast majority of this site was hand coded by yours truly. The images on this site are not AI generated, but may have minor modifications from an AI, including but not limited to changing the background colour. The prose on the website is handwritten in totality."]
+       [:hr]
+       (get-post-content-with-link "Pen and Paper Notes"
+                                   "pen-and-paper-notes")]
       [:div.col-8.column
        [:img {:src "/img/ship.png"}]
        [:p "Look at how cool this ship is looking! Quite distinguished. Let's hope it is royalty free."]
@@ -96,7 +99,12 @@
                                      "my-goals")
          [:hr]
          (get-post-content-with-link  "Almost Getting Hit By Cars"
-                                      "almost-getting-hit-by-cars")]
+                                      "almost-getting-hit-by-cars")
+
+         [:hr]
+         (get-post-content-with-link  "Procrastination"
+                                      "procrastination"
+                                      5)]
         [:div.col-6.column
          (get-post-content-with-link "New Years Resolutions"
                                      "new-years-resolutions"

@@ -6,7 +6,7 @@
     --old-newspaper-color: #2e261e;
     --font-fancy: "Manufacturing Consent", serif;
     --font-title: "PT Serif", serif;
-    --font-prose: "Times", "Times New Roman", serif;
+    --font-prose: "Times New Roman", serif;
 }
 
 body {
@@ -46,6 +46,7 @@ body {
 
     color: var(--old-newspaper-color);
     font-family: var(--font-prose);
+    font-size: 18px;
 }
 
 #paper {
@@ -163,7 +164,7 @@ body {
 h2 {
     font-family: var(--font-title);
     margin: 0;
-    margin-bottom: 0.25rem;
+    margin-top: 0.3rem;
     font-size: 1.6rem;
     word-spacing: 0.4rem;
     letter-spacing: 0.05rem;
@@ -172,7 +173,7 @@ h2 {
 }
 
 p {
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
     font-weight: 400;
 }
 
