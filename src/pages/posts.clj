@@ -44,7 +44,7 @@
            [:h1 "All posts"]
            [:p [:a {:href "/"} "Home"] "."]
            [:ul
-            (for [post-name post-files] [:li [:a {:href (str "posts/"
+            (for [post-name post-files] [:li [:a {:href (str "/posts/"
                                                              (string/replace post-name #".md$" ""))}
                                               (format-post-name post-name)]])])}})
 

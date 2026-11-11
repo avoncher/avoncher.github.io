@@ -6,7 +6,7 @@
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
-(def message-of-the-day "If anything is worth doing, it's worth doing badly.")
+(def message-of-the-day "analogue alarm clocks are goated")
 
 (def spezi
   [:div {:style {:display "flex"
@@ -88,7 +88,7 @@
        [:div.sf-grid
         [:div.col-6.column
          [:h2 [:a {:href "/posts/lessons"} "Lessons Learnt: A 21 Year Reflection"]]
-         [:p "As my twenty first birthday rolled around, it got me thinking about the things I have learnt, and what I wish I could have told my younger self. After pondering for a while, and having things float around my brain, twelve items feature in this Avoncher exclusive compilation."]
+         [:p "As my twenty first birthday rolled around, it got me thinking about the things I have learnt, and what I wish I could have told my younger self. After pondering for a while, and having things float around my brain, " [:s "twelve"] " thirteen items feature in this Avoncher exclusive compilation."]
          [:p [:a {:href "/posts/lessons"} "Full article on page 10."]]
          [:hr]
          [:div.ad

@@ -27,6 +27,7 @@
       (for [stylesheet stylesheets]
         [:link {:rel "stylesheet" :href stylesheet}])
       (h/raw "<script data-goatcounter=\"https://avoncher.goatcounter.com/count\" async src=\"//gc.zgo.at/count.js\"></script>")
+      (h/raw "<!-- Analytics is GDPR compliant! All data is anonymous aggregates and cannot be linked to any particular user. Read https://www.goatcounter.com/help/gdpr for more -->")
       append-head]
      [:body body]])))
 
